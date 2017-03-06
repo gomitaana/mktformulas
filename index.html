@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Mkt de Servicios</title>
+
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+    <h1>¿Cuántos Servquals necesitamos hacer?</h1>
+  </div>
+
+  <div style="height:50px;"></div>
+
+  <div class="container" id="primera">
+      <fieldset class="form-horizontal">
+      <!-- Form Name -->
+      <legend>Primera Formula</legend>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Nivel de confianza</label>  
+        <div class="col-md-4">
+        <input id="nivelconf" name="nivelconf" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Desviación</label>  
+        <div class="col-md-4">
+        <input id="desviacion" name="desviacion" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Error muenstral</label>  
+        <div class="col-md-4">
+        <input id="error" name="error" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Button (Double) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="button1id"></label>
+        <div class="col-md-8">
+          <button class="btn btn-success" onclick="primera()" >Calcular</button>
+        </div>
+      </div>
+
+      </fieldset>
+  </div>
+
+    <div class="container" id="segunda">
+      <fieldset class="form-horizontal">
+      <!-- Form Name -->
+      <legend>Segunda Formula</legend>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Nivel de confianza</label>  
+        <div class="col-md-4">
+        <input id="conf2" name="conf2" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Proporcion de exito</label>  
+        <div class="col-md-4">
+        <input id="p" name="p" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Proporcion de fracaso</label>  
+        <div class="col-md-4">
+        <input id="q" name="q" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Error muenstral</label>  
+        <div class="col-md-4">
+        <input id="error2" name="error2" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Button (Double) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="button1id"></label>
+        <div class="col-md-8">
+          <button class="btn btn-success" onclick="segunda()" >Calcular</button>
+        </div>
+      </div>
+
+      </fieldset>
+  </div>
+
+   <div class="container" id="segunda">
+      <fieldset class="form-horizontal">
+      <!-- Form Name -->
+      <legend>Tercera Formula</legend>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Nivel de confianza</label>  
+        <div class="col-md-4">
+        <input id="conf3" name="conf3" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Error muenstral</label>  
+        <div class="col-md-4">
+        <input id="error3" name="error3" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Población</label>  
+        <div class="col-md-4">
+        <input id="n" name="n" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Desviación</label>  
+        <div class="col-md-4">
+        <input id="desviacion2" name="desviacion2" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Button (Double) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="button1id"></label>
+        <div class="col-md-8">
+          <button class="btn btn-success" onclick="tercera()" >Calcular</button>
+        </div>
+      </div>
+
+      </fieldset>
+  </div>
+
+   <div class="container" id="segunda">
+      <fieldset class="form-horizontal">
+      <!-- Form Name -->
+      <legend>Cuarta Formula</legend>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Nivel de confianza</label>  
+        <div class="col-md-4">
+        <input id="conf4" name="conf4" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Proporcion de exito</label>  
+        <div class="col-md-4">
+        <input id="p2" name="p2" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Proporcion de fracaso</label>  
+        <div class="col-md-4">
+        <input id="q2" name="q2" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Población</label>  
+        <div class="col-md-4">
+        <input id="n2" name="n2" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Error muenstral</label>  
+        <div class="col-md-4">
+        <input id="error4" name="error4" placeholder="" class="form-control input-md" type="text">
+        </div>
+      </div>
+
+      <!-- Button (Double) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="button1id"></label>
+        <div class="col-md-8">
+          <button class="btn btn-success" onclick="cuarta()" >Calcular</button>
+        </div>
+      </div>
+
+      </fieldset>
+  </div>
+
+  <script type="text/javascript">
+    function primera() {
+      var confianza = $( "#nivelconf" ).val();
+      var error = $( "#error" ).val();
+      var desviacion = $( "#desviacion" ).val();
+      var resultado = (Math.pow(confianza, 2) * Math.pow(desviacion, 2)) / (Math.pow(error, 2));
+      alert(resultado);
+    }
+
+    function segunda() {
+      var confianza = $( "#conf2" ).val();
+      var error = $( "#error2" ).val();
+      var p = $( "#p" ).val();
+      var p = $( "#q" ).val();
+      var resultado = (Math.pow(confianza, 2) * p*q ) / (Math.pow(error, 2));
+      alert(resultado);
+    }
+
+    function tercera() {
+      var confianza = $( "#conf3" ).val();
+      var error = $( "#error3" ).val();
+      var desviacion = $( "#desviacion2" ).val();
+      var n = $( "#n" ).val();
+var resultado = ( Math.pow(confianza, 2) * Math.pow(desviacion, 2) * n ) / ( Math.pow(error, 2) * (n-1) + ( Math.pow(confianza, 2) * Math.pow(desviacion, 2) ));
+      alert(resultado);
+    }
+
+    function cuarta() {
+      var confianza = $( "#conf4" ).val();
+      var error = $( "#error4" ).val();
+      var p = $( "#p2" ).val();
+      var p = $( "#q2" ).val();
+      var n = $( "#n2" ).val();
+  var resultado = (Math.pow(confianza, 2) * p*q*n ) / ( Math.pow(error, 2) * (n-1) + (Math.pow(confianza, 2) * p*q));
+      alert(resultado);
+    }
+  </script>
+
+  
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </body>
+</html>
