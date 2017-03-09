@@ -166,7 +166,7 @@
 
       <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Nivel de confianza</label>  
+        <label class="col-md-4 control-label" for="textinput">Nivel de confianza (z)</label>  
         <div class="col-md-4">
         <input id="conf4" name="conf4" placeholder="" class="form-control input-md" type="text">
         </div>
@@ -174,7 +174,7 @@
 
       <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Proporcion de exito</label>  
+        <label class="col-md-4 control-label" for="textinput">Proporcion de exito (p)</label>  
         <div class="col-md-4">
         <input id="p2" name="p2" placeholder="" class="form-control input-md" type="text">
         </div>
@@ -182,7 +182,7 @@
 
       <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Proporcion de fracaso</label>  
+        <label class="col-md-4 control-label" for="textinput">Proporcion de fracaso (q)</label>  
         <div class="col-md-4">
         <input id="q2" name="q2" placeholder="" class="form-control input-md" type="text">
         </div>
@@ -190,7 +190,7 @@
 
       <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Población</label>  
+        <label class="col-md-4 control-label" for="textinput">Población (N)</label>  
         <div class="col-md-4">
         <input id="n2" name="n2" placeholder="" class="form-control input-md" type="text">
         </div>
@@ -198,7 +198,7 @@
 
       <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Error muenstral</label>  
+        <label class="col-md-4 control-label" for="textinput">Error muenstral (e)</label>  
         <div class="col-md-4">
         <input id="error4" name="error4" placeholder="" class="form-control input-md" type="text">
         </div>
@@ -248,7 +248,8 @@ var resultado = ( Math.pow(confianza, 2) * Math.pow(desviacion, 2) * n ) / ( Mat
       var p = $( "#p2" ).val();
       var p = $( "#q2" ).val();
       var n = $( "#n2" ).val();
-  var resultado = (Math.pow(confianza, 2) * p*q*n ) / ( Math.pow(error, 2) * (n-1) + (Math.pow(confianza, 2) * p*q));
+      var resultado = Math.pow(confianza,2) * p * q * n2;
+      resultado = resultado / ( Math.pow(error,2) * (n-1) + Math.pow(confianza,2) * p * q );
       alert(resultado);
     }
   </script>
