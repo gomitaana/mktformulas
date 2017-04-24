@@ -246,9 +246,9 @@ var resultado = ( Math.pow(confianza, 2) * Math.pow(desviacion, 2) * n ) / ( Mat
       var confianza = $( "#conf4" ).val();
       var error = $( "#error4" ).val();
       var p = $( "#p2" ).val();
-      var p = $( "#q2" ).val();
+      var q = $( "#q2" ).val();
       var n = $( "#n2" ).val();
-      var resultado = Math.pow(confianza,2) * p * q * n2;
+      var resultado = Math.pow(confianza,2) * p * q * n;
       resultado = resultado / ( Math.pow(error,2) * (n-1) + Math.pow(confianza,2) * p * q );
       alert(resultado);
     }
